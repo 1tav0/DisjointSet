@@ -1,3 +1,5 @@
+#include <bits10_1.h>/stdc++.h>
+using namespace std;
 class DisjointSet{
     vector<int> rank, parent, size;
 public: 
@@ -5,7 +7,7 @@ public:
         rank.resize(n + 1, 0); //to work with 0 and 1 based indexes
         parent.resize(n + 1);
         size.resize(n + 1);
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i <= n; i++){
             parent[i] = i;
             size[i] = 1;
         }
@@ -40,7 +42,7 @@ public:
         int ulp_u = findUParent(u);
         int ul_v = findUParent(v);
 
-        if(size[ulp_u] == size[ulp_v])
+        if(ulp_u == ulp_v)
             return;
         if(size[ulp_u] < size[ulp_v]){
             parent[ulp_u] = ulp_v;
