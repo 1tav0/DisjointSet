@@ -9,15 +9,18 @@ int frogJump(int n, vector<int> &heights, int k){
     if(dp[n] != -1)
         return dp[n];
 
-    int minSteps = INT_MAX;
-    for (int i = 1; i <= k; i++){
-        if(n-i>=0){
-            int jump = frogJump(n - i) + abs(heights[n] - heights[n - i]);
-            minSteps = min(minSteps, jump);
+    for (int i = 1; i < n; i++){
+        int minSteps = INT_MAX;
+        for (int j = 1; j <= k; j++){
+            if(i-j>=>=0){
+                int jump = frogJump(i-j) + abs(heights[n] - heights[n - j]);
+                minSteps = min(minSteps, jump);
+            }
+            dp[i] = minSteps;
         }
     }
-    return dp[n] = minSteps;
+    return dp[n - 1];
 }
 
-//tc - O(n)xK
-//sc - O(n)+O(n)
+//tc - O(nxK)
+//sc - O(n)
