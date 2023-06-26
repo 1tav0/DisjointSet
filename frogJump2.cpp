@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 
-// tabulation solution
+// tabulation for frogjump2 solution
 int frogJump(int n, vector<int> &heights, int k){
     vector<int> dp(n + 1, -1);
     if(n==0)
