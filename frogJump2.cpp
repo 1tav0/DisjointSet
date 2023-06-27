@@ -24,3 +24,7 @@ int frogJump(int n, vector<int> &heights, int k){
 
 //tc - O(nxK)
 //sc - O(n)
+//steps: 
+//represent in terms of ind
+//do stuff om that index
+// return count / min or max
