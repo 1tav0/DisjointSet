@@ -28,3 +28,6 @@ int frogJump(int n, vector<int> &heights, int k){
 //represent in terms of ind
 //do stuff om that index
 // return count / min or max
+//recursion tree -top down
+//memoization - overlappin subproblems
+//tabulation - bottom up
