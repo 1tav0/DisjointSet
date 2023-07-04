@@ -31,3 +31,9 @@ int frogJump(int n, vector<int> &heights, int k){
 //recursion tree -top down
 //memoization - overlappin subproblems
 //tabulation - bottom up
+
+bool helper(int ind, vector<int>& num){
+    if(ind==0){
+        return true;
+    }
+}
