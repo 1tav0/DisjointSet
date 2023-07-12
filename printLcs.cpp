@@ -25,6 +25,7 @@ void lcs(string s, string t){
         ans += '$';
     }
 
+    // tc - O(n + m) worst case scenerio 
     int ind = len - 1;
     int i = n, j = m;
     while(i>0 && j>0){
