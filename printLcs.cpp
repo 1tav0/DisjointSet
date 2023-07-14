@@ -58,7 +58,6 @@ int main(){
 void printLcs(string s, string t){
     int n = s.size();
     int m = t.size();
-
     vector<vector<int>> dp(n, vector<int>(m, 0));
     for (int i = 1; i <= n; i++){
         for (int j = 1; j <= m; j++){
@@ -78,7 +77,7 @@ void printLcs(string s, string t){
     int i = n, j = m;
     while(i>0 && j>0){
         if(s[i-1]==t[j-1]){
-            ans[i] = s[i - 1];
+            ans[ind] += s[i - 1];
             ind--, i--, j--;
         }else if(dp[i-1][j]>dp[i][j-1]){
             i--;
